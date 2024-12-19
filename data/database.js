@@ -9,7 +9,7 @@ import { MongoClient, ServerApiVersion } from 'mongodb';
 const connectionProtocol = "mongodb+srv";
 const clusterAddress = "cluster0.z1l2m.mongodb.net";
 const dbUser = "MW";
-const dbPassword = "zaq1@WSX";
+const dbPassword = encodeURIComponent("zaq1@WSX");
 const dbName = "Cluster0";
 
 const uri = `${connectionProtocol}://${dbUser}:${dbPassword}@${clusterAddress}/?retryWrites=true&w=majority&appName=${dbName}`;
